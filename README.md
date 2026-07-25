@@ -247,10 +247,8 @@ PE_((pos,2i) )=sin⁡(pos/10000^(2i/d_"model"  ) )
 
 Multi-Head Attention (MHA):
  Instead of running one attention pass, h parallel "heads" project Q,K,V into lower-dimensional subspaces, allowing the network to simultaneously focus on syntactic, semantic, and contextual relationships across tokens.
-
 	Feed-Forward Networks (FFN):
  A two-layer perceptron with non-linear activation (e.g., GELU) applied independently to each position vector: "FFN" (x)=max⁡(0,xW_1+b_1 ) W_2+b_2.
-
 	Layer Normalization & Residual Connections:
  Skip connections (x+"SubLayer" (x)) wrapped with Layer Normalization ensure smooth gradient flow during deep network backpropagation.
 	Encoder-Decoder:
