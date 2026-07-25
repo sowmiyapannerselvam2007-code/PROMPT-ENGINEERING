@@ -253,16 +253,12 @@ Multi-Head Attention (MHA):
 
 	Layer Normalization & Residual Connections:
  Skip connections (x+"SubLayer" (x)) wrapped with Layer Normalization ensure smooth gradient flow during deep network backpropagation.
-
 	Encoder-Decoder:
  Full bidirectional encoder paired with a cross-attending masked decoder (e.g., T5).
-
 	Encoder-Only:
  Uses unmasked attention for sequence classification and representation (e.g., BERT).
-
 	Decoder-Only:
  Uses causal (masked) self-attention to predict the next token sequentially (e.g., GPT-4, LLaMA).
-
  Comparative Generative Architectures
  
 Architecture	Operational Mechanism	Key Advantage	Main Limitation	Primary Applications
@@ -430,7 +426,6 @@ Gemini (Google)	Native multimodal tokens & long context	Multi-million token cont
 Claude (Anthropic)	Scaling + Constitutional AI alignment	Advanced code generation & complex agentic workflows
 
  Primary Bottlenecks & Challenges
- 
 	Compute & Energy Cost: Frontier runs require tens of thousands of GPUs, costing tens of millions of dollars with massive carbon/grid impact.
 <img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/adcf2a74-c9e1-474d-95ee-ae2b78af3ba5" />
 
