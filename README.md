@@ -284,24 +284,24 @@ Example: If the prompt is "Write a short essay on climate change," the AI genera
 
 Applications of Generative AI
 1. Healthcare
-•	Medical image analysis 
-•	Drug discovery 
+	Medical image analysis 
+	Drug discovery 
 2. Education
-•	AI tutors 
-•	Assignment assistance 
+	AI tutors 
+	Assignment assistance 
 3. Cybersecurity
-•	Threat detection 
-•	Malware analysis 
+	Threat detection 
+	Malware analysis 
 4. Gaming
-•	Intelligent NPCs (Non-Player Characters) 
-•	Story generation 
+	Intelligent NPCs (Non-Player Characters) 
+	Story generation 
 
 Advantages
-•	Generates content quickly and efficiently. 
-•	Improves productivity and creativity. 
+	Generates content quickly and efficiently. 
+	Improves productivity and creativity. 
 Limitations
-•	May generate incorrect or biased information. 
-•	Requires large datasets and powerful computing resources. 
+	May generate incorrect or biased information. 
+	Requires large datasets and powerful computing resources. 
 
 GEMINI
 Major Generative AI Architectures: Focus on Transformers
@@ -324,8 +324,6 @@ The mathematical formulation for attention is:
 Scaling Factor (√(d_k )): Prevents large inner products from pushing the softmax function into regions with near-zero gradients.
 C. Multi-Head Attention (MHA)
 Rather than computing attention once, MHA projects Q,K,Vinto hdistinct subspaces in parallel. This allows the network to track syntax, semantic relationships, and long-range dependencies simultaneously:
-"MultiHead" (Q,K,V)="Concat" (〖"head" 〗_1,…,〖"head" 〗_h ) W^O
-〖"head" 〗_i="Attention" (QW_i^Q,KW_i^K,VW_i^V )
 B. Feed-Forward Networks (FFN) & Layer Normalization
 	Position-Wise FFN: 
 	Applies a non-linear two-layer transformation to each token vector individually: "FFN" (x)=max⁡(0,xW_1+b_1 ) W_2+b_2.
@@ -362,15 +360,15 @@ Larger models learn more patterns from data, allowing them to generate more accu
 Scaling improves logical thinking and problem-solving abilities. Large models can answer complex questions, summarize information, write code, and explain difficult concepts more effectively.
 
 Challenges of Scaling
-•	High Computational Cost: Training large models requires expensive GPUs, TPUs, and large memory. 
+	High Computational Cost: Training large models requires expensive GPUs, TPUs, and large memory. 
 
 Examples of Modern LLMs
-•	GPT (OpenAI): Used for chatbots, content creation, coding, and education. 
-•	Gemini (Google): Supports text, images, audio, and code in a single AI model. 
-•	Claude (Anthropic): Designed for safe, reliable, and helpful conversations. 
+	GPT (OpenAI): Used for chatbots, content creation, coding, and education. 
+	Gemini (Google): Supports text, images, audio, and code in a single AI model. 
+	Claude (Anthropic): Designed for safe, reliable, and helpful conversations. 
 
 Advantages
-•	Higher accuracy and better language understanding. 
+	Higher accuracy and better language understanding. 
 
 GEMINI
 
@@ -427,32 +425,34 @@ After successful testing, the model is deployed as a chatbot, API, or cloud serv
 Inference is the stage where users interact with the model. When a prompt is entered, the LLM predicts the most appropriate response based on its training.
 
 Popular Large Language Models
-•	GPT (OpenAI): Used for conversation, coding, content creation, and education. 
-•	Gemini (Google): A multimodal AI model that works with text, images, audio, and code. 
-•	Claude (Anthropic): Designed to provide safe, reliable, and helpful AI responses. 
-•	LLaMA (Meta): An open-weight language model widely used for AI research and development. 
+	GPT (OpenAI): Used for conversation, coding, content creation, and education. 
+	Gemini (Google): A multimodal AI model that works with text, images, audio, and code. 
+	Claude (Anthropic): Designed to provide safe, reliable, and helpful AI responses. 
+	LLaMA (Meta): An open-weight language model widely used for AI research and development. 
 
 Applications of LLMs
-•	Chatbots and virtual assistants 
-•	Language translation
+	Chatbots and virtual assistants 
+	Language translation
 GEMINI
 
 GEMINI
 Building an LLM from Scratch: Lifecycle Overview
 1. Data Pipeline & Tokenization
-  Raw Text       Quality Filter & Deduplication     BPE / Unigram          Token Embeddings + RoPE
+
+2. Raw Text       Quality Filter & Deduplication     BPE / Unigram          Token Embeddings + RoPE
 [Web Corpora] ───────────────────────────────► [Clean Text] ────────────► [Numerical Tokens] ─────────────► Vectors
 	Data Filtering: Millions of web pages undergo MinHash deduplication, quality classification, and PII scrubbing.
 	Tokenization: Algorithms like Byte-Pair Encoding (BPE) break raw text into subwords (e.g., "unbreakable" → ["un", "break", "able"]), mapping tokens to integer IDs.
-2. Architecture & Pre-Training
-	Decoder-Only Transformer: Uses RMSNorm, Grouped-Query Attention (GQA), and Rotational Positional Embeddings (RoPE).
+3. Architecture & Pre-Training
+
+4.	Decoder-Only Transformer: Uses RMSNorm, Grouped-Query Attention (GQA), and Rotational Positional Embeddings (RoPE).
 	Self-Supervised Objective: Trained on trillions of tokens across thousands of GPUs to predict the next token via cross-entropy loss:
-L(θ)=-∑_t▒〖log⁡P〗_θ  (w_t∣w_1,…,w_(t-1) )
-3. Post-Training Alignment (SFT & RLHF)
-"Base Model" →┴□("Supervised Fine-Tuning (SFT)" ) "Instruction Follower" →┴□("RLHF / DPO Alignment" ) "Safe Assistant" 
+
+5.. Post-Training Alignment (SFT & RLHF)
+"Base Model" ("Supervised Fine-Tuning (SFT)" ) "Instruction Follower" →┴□("RLHF / DPO Alignment" ) "Safe Assistant" 
 	Supervised Fine-Tuning (SFT): Fine-tuned on high-quality curated prompt-response pairs.
 	Reinforcement Learning from Human Feedback (RLHF): Aligns outputs using preference ranking models via Direct Preference Optimization (DPO) or Proximal Policy Optimization (PPO).
-4. Popular LLM Architectures Compared
+7. Popular LLM Architectures Compared
 Model	Developer	Architecture Highlight	Access
 GPT-4 / o3	OpenAI	Mixture-of-Experts (MoE) & test-time reasoning compute	Closed
 Gemini	Google	Native multimodal processing (text, audio, video) & long context	Closed
