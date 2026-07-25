@@ -171,23 +171,23 @@ Transformer Architecture
 The Transformer architecture was introduced by Google in 2017 in the paper "Attention Is All You Need." Unlike traditional RNNs, Transformers process all input words simultaneously using the self-attention mechanism, making them faster and more accurate.
 Working of Transformers
 1. Input Embedding and Positional Encoding
-•	Words are converted into numerical vectors called embeddings. 
-•	Since Transformers process words in parallel, positional encoding is added to preserve the order of words. 
-2. Self-Attention Mechanism
-•	Self-attention helps the model understand the relationship between every word in a sentence. 
-•	It assigns higher importance to relevant words and lower importance to unrelated words. 
-3. Multi-Head Attention
-•	Instead of using one attention mechanism, the Transformer uses multiple attention heads. 
-•	Each head learns different relationships, improving understanding and accuracy. 
-4. Feed-Forward Network (FFN)
-•	The attention output is passed through fully connected neural network layers. 
-•	This helps the model learn more complex features. 
-5. Layer Normalization
-•	Layer normalization stabilizes training and speeds up learning. 
-•	It improves the performance of deep neural networks. 
-6. Encoder–Decoder Architecture
-•	Encoder: Reads and understands the input. 
-•	Decoder: Generates the output based on the encoder's information. 
+	Words are converted into numerical vectors called embeddings.
+	Since Transformers process words in parallel, positional encoding is added to preserve the order of words. 
+3. Self-Attention Mechanism
+	Self-attention helps the model understand the relationship between every word in a sentence. 
+	It assigns higher importance to relevant words and lower importance to unrelated words. 
+4. Multi-Head Attention
+	Instead of using one attention mechanism, the Transformer uses multiple attention heads. 
+	Each head learns different relationships, improving understanding and accuracy. 
+5. Feed-Forward Network (FFN)
+	The attention output is passed through fully connected neural network layers. 
+	This helps the model learn more complex features. 
+6. Layer Normalization
+	Layer normalization stabilizes training and speeds up learning. 
+	It improves the performance of deep neural networks. 
+7. Encoder–Decoder Architecture
+	Encoder: Reads and understands the input. 
+	Decoder: Generates the output based on the encoder's information. 
 Modern GPT models mainly use the decoder, while translation models like T5 use both encoder and decoder.
 
 
@@ -199,16 +199,16 @@ VAE	Data generation and compression	Stable training	Images are less sharp	Medica
 Diffusion Model	High-quality image generation	Excellent image quality	Slow generation process	DALL·E, Stable Diffusion, image editing
 
 Advantages of Transformers
-•	Processes data in parallel, making training faster. 
-•	Handles long-range dependencies effectively. 
+	Processes data in parallel, making training faster. 
+	Handles long-range dependencies effectively. 
 
 Disadvantages of Transformers
-•	Requires powerful GPUs and large memory. 
-•	High computational cost. 
+	Requires powerful GPUs and large memory. 
+	High computational cost. 
 
 Practical Applications
-•	Chatbots: ChatGPT, Gemini, Claude. 
-•	Language Translation: Google Translate.
+	Chatbots: ChatGPT, Gemini, Claude. 
+	Language Translation: Google Translate.
 
 GEMINI
 
@@ -223,20 +223,33 @@ PE_((pos,2i) )=sin⁡(pos/10000^(2i/d_"model"  ) )
 	Scaled Dot-Product Self-Attention: Input projections create three matrices: Query (Q) (what a token searches for), Key (K) (what a token contains), and Value (V) (the token's feature content). The attention weights determine how much focus each token places on every other token:
 "Attention" (Q,K,V)="softmax" ((QK^T)/√(d_k ))V
 (Scaling by √(d_k ) prevents gradients from vanishing in higher dimensional spaces).
-	Multi-Head Attention (MHA): Instead of running one attention pass, h parallel "heads" project Q,K,V into lower-dimensional subspaces, allowing the network to simultaneously focus on syntactic, semantic, and contextual relationships across tokens.
-	Feed-Forward Networks (FFN): A two-layer perceptron with non-linear activation (e.g., GELU) applied independently to each position vector: "FFN" (x)=max⁡(0,xW_1+b_1 ) W_2+b_2.
-	Layer Normalization & Residual Connections: Skip connections (x+"SubLayer" (x)) wrapped with Layer Normalization ensure smooth gradient flow during deep network backpropagation.
-	Encoder-Decoder Variants:
-	Encoder-Decoder: Full bidirectional encoder paired with a cross-attending masked decoder (e.g., T5).
-	Encoder-Only: Uses unmasked attention for sequence classification and representation (e.g., BERT).
-	Decoder-Only: Uses causal (masked) self-attention to predict the next token sequentially (e.g., GPT-4, LLaMA).
-2. Comparative Generative Architectures
+
+2.	Multi-Head Attention (MHA):
+ Instead of running one attention pass, h parallel "heads" project Q,K,V into lower-dimensional subspaces, allowing the network to simultaneously focus on syntactic, semantic, and contextual relationships across tokens.
+
+	Feed-Forward Networks (FFN):
+ A two-layer perceptron with non-linear activation (e.g., GELU) applied independently to each position vector: "FFN" (x)=max⁡(0,xW_1+b_1 ) W_2+b_2.
+
+	Layer Normalization & Residual Connections:
+ Skip connections (x+"SubLayer" (x)) wrapped with Layer Normalization ensure smooth gradient flow during deep network backpropagation.
+
+	Encoder-Decoder:
+ Full bidirectional encoder paired with a cross-attending masked decoder (e.g., T5).
+
+	Encoder-Only:
+ Uses unmasked attention for sequence classification and representation (e.g., BERT).
+
+	Decoder-Only:
+ Uses causal (masked) self-attention to predict the next token sequentially (e.g., GPT-4, LLaMA).
+
+3. Comparative Generative Architectures
 Architecture	Operational Mechanism	Key Advantage	Main Limitation	Primary Applications
 Transformer	Attention-based token probability estimation	Parallel training; captures long context	Quadratic memory scaling O(N^2 )	Text generation, code, translation
 GAN	Minimax game: Generator vs. Discriminator	Ultra-fast single-pass sampling	Unstable training (mode collapse)	Real-time image synthesis, deepfakes
 VAE	Maximizes Evidence Lower Bound (ELBO)	Continuous, smooth latent space	Generated images tend to be blurry	Compression, anomaly detection
-Diffusion	Learns to reverse an iterative noise process	SOTA image fidelity and diversity	Slow inference (iterative steps required)	Midjourney, Stable Diffusion, Sora
-3. Advantages, Limitations, and Applications
+Diffusion	Learns to reverse an iterative noise process	SOTA image fidelity and diversity	Slow inference (iterative steps required)	Midjourney, Stable Diffusion.
+
+4. Advantages, Limitations, and Applications
 Transformer Strengths & Trade-offs
 	Pros: Highly scalable on parallel GPU clusters; excels at high-level reasoning and broad contextual understanding.
 	Cons: High computational memory footprint during long-sequence processing; susceptible to producing plausible-sounding factual errors (hallucinations).
@@ -314,13 +327,16 @@ Rather than computing attention once, MHA projects Q,K,Vinto hdistinct subspaces
 "MultiHead" (Q,K,V)="Concat" (〖"head" 〗_1,…,〖"head" 〗_h ) W^O
 〖"head" 〗_i="Attention" (QW_i^Q,KW_i^K,VW_i^V )
 B. Feed-Forward Networks (FFN) & Layer Normalization
-	Position-Wise FFN: Applies a non-linear two-layer transformation to each token vector individually: "FFN" (x)=max⁡(0,xW_1+b_1 ) W_2+b_2.
+	Position-Wise FFN: 
+	Applies a non-linear two-layer transformation to each token vector individually: "FFN" (x)=max⁡(0,xW_1+b_1 ) W_2+b_2.
 	Residual Connections & Normalization: Each sub-layer uses residual skip connections (x+"SubLayer" (x)) followed by Layer Normalization to stabilize gradient propagation.
+	
 2. Comparative Analysis of Generative Models
 Architecture	Core Principle	Primary Advantage	Main Limitation	Primary Domains
 Transformer	Self-Attention over sequential tokens	Scalable; captures long-range context in parallel	Memory scales quadratically O(N^2 )with sequence length	Text, Code, Multimodal reasoning
 GAN	Minimax game between Generator & Discriminator	Fast single-pass generation; sharp visual details	Unstable training; susceptible to mode collapse	Real-time image generation, deepfakes
-3. Advantages, Disadvantages & Real-World Applications
+
+4. Advantages, Disadvantages & Real-World Applications
 Advantages
 	Massive Parallelization: Fully utilizes GPU cluster acceleration during training.
 Disadvantages
