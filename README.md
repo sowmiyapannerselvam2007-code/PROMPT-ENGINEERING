@@ -333,6 +333,8 @@ Real-World Applications
 4.Explain the impact of scaling in Large Language Models (LLMs). Describe how increasing model size, training data, and computational resources affect the performance, reasoning, creativity, accuracy, and limitations of LLMs. Include suitable examples.
 
 CHATGPT
+
+
 Impact of Scaling in Large Language Models (LLMs)
 Introduction
 Large Language Models (LLMs) are advanced Artificial Intelligence (AI) systems that understand and generate human language. Scaling refers to increasing the model parameters, training data, and computing resources used to build these models. 
@@ -355,6 +357,8 @@ Advantages
 •	Higher accuracy and better language understanding. 
 
 GEMINI
+
+
 Impact of Scaling in LLMs: Compact Overview
 1. Scaling Laws & Core Equation
 Based on empirical scaling laws (Kaplan et al., 2020; Hoffmann et al., 2022), model loss (L) scales predictably as a power-law across Parameters (N), Dataset Size (D), and Compute (C):
@@ -440,6 +444,17 @@ Claude	Anthropic	Constitutional AI alignment & long-context coding reasoning	Clo
 LLaMA	Meta	Scaled open-weights foundation model using GQA & SwiGLU	Open-Weights
 DeepSeek	DeepSeek	Multi-Head Latent Attention (MLA) & DeepSeekMoE for low-cost compute	Open-Source
 <img width="655" height="669" alt="image" src="https://github.com/user-attachments/assets/c70e2030-5317-4679-b6fb-36a977c6f263" />
+
+Topic	ChatGPT	Gemini
+Accuracy	More detailed and technically accurate	Accurate but sometimes provides shorter explanations
+Creativity	Generates creative examples and detailed content	Gives practical and concise examples
+Reasoning	Strong step-by-step reasoning with logical explanations	Good reasoning but may be less detailed in complex topics
+Hallucination	Low	Low to Medium (occasionally gives less precise information)
+Speed	Very Fast	Very Fast
+
+Conclusion:
+
+Among the two AI tools, ChatGPT is the better choice for academic assignments and detailed learning. It provides more comprehensive explanations, stronger reasoning, better technical accuracy, and well-structured content. While Gemini is also fast and accurate, its responses are often shorter and less detailed. Therefore, ChatGPT is the best overall AI tool for this experiment, especially for generating high-quality educational content and completing college assignments.
 
 
 
