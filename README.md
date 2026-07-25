@@ -70,7 +70,6 @@ Definition of Generative AI
    
 Generative AI is a type of artificial intelligence that uses machine learning and deep learning algorithms to generate new and original content based on patterns learned from existing data. Instead of simply identifying information, it creates realistic outputs that were not explicitly programmed.
 Example:
-
 	ChatGPT generates human-like text. 
 	DALL·E creates images from text descriptions. 
 
@@ -132,13 +131,11 @@ Applications:
 	Text summarization
 
  Limitations of Generative AI
- 
 	May produce incorrect or misleading information (hallucinations). 
 	Depends heavily on the quality of training data. 
 	Requires significant computational resources and energy. 
 
  Real-World Applications
- 
 Generative AI is transforming many industries.
 	Education: Intelligent tutoring systems, assignment assistance, and content generation. 
 	Healthcare: Medical image analysis, drug discovery, and clinical documentation. 
@@ -151,14 +148,12 @@ GEMINI
 Generative AI learns the statistical patterns of a dataset P(X) to create completely new synthetic data (text, images, code, audio) that mirrors real human output—unlike Discriminative AI, which only classifies existing data P(Y|X).
 
  Core Evolution
-
 	1950s–2000s: Rule-based grammars → LSTMs/RNNs for basic sequence prediction.
 	2013–2014: VAEs and GANs introduce deep image/data generation.
 	2017: Transformers remove sequential limits using self-attention.
 	2020s: Diffusion Models overtake GANs for image quality; LLMs scale globally.
 	
  Core Working Principle
- 
 	Embedding: Inputs convert into high-dimensional numerical vectors.
 	Distribution Learning: The network learns how features co-occur across billions of parameters.
 	Sampling: New data is drawn from this learned mathematical space or predicted token-by-token.
@@ -166,17 +161,14 @@ Generative AI learns the statistical patterns of a dataset P(X) to create comple
  Pros, Cons & Applications
  
 Advantages
-
 	Automation: Instant draft creation for code, text, and design.
 	Synthetic Data: Generates mock medical/privacy data to train other models safely.
 	
 Limitations
-
 	Hallucinations: Confidently generates false factual information.
 	Compute Costs: Requires massive energy and expensive GPU clusters.
 	
 Applications
-
 	Text/Code: Automated translation, documentation, and debugging.
 	Media: Concept art, voice synthesis, and video generation.
 <img width="1386" height="904" alt="image" src="https://github.com/user-attachments/assets/8af2148f-3680-4b58-8413-d44079c3132b" />
@@ -192,7 +184,6 @@ Introduction
 Generative AI uses different deep learning architectures to create text, images, audio, videos, and code. The four major architectures are Transformers, GANs (Generative Adversarial Networks), VAEs (Variational Autoencoders), and Diffusion Models. Among these, the Transformer architecture is the most widely used because it powers modern Large Language Models (LLMs) such as ChatGPT, Gemini, and Claude.
 
 Transformer Architecture
-
 The Transformer architecture was introduced by Google in 2017 in the paper "Attention Is All You Need." Unlike traditional RNNs, Transformers process all input words simultaneously using the self-attention mechanism, making them faster and more accurate.
 
 Working of Transformers
@@ -286,7 +277,6 @@ Transformer Strengths & Trade-offs
 	Pros: Highly scalable on parallel GPU clusters; excels at high-level reasoning and broad contextual understanding.
 	Cons: High computational memory footprint during long-sequence processing; susceptible to producing plausible-sounding factual errors (hallucinations).
 Primary Applications
-
 	Natural Language Processing & Code: Code generation (GitHub Copilot), automated translation, and conversational assistants (ChatGPT, Gemini).
 	Multimodal Synthesis: Vision Transformers (ViT) and text-to-image backbones (Diffusion Transformers / DiT).
 <img width="1400" height="787" alt="image" src="https://github.com/user-attachments/assets/6d9e35f4-cff5-4c83-a29b-9e6fd2830114" />
@@ -301,7 +291,6 @@ Introduction
 Generative Artificial Intelligence (Generative AI) is a branch of AI that creates new content such as text, images, videos, audio, and computer code. It uses deep learning models to learn patterns from large datasets and generate realistic outputs. Popular Generative AI systems include ChatGPT, Gemini, DALL·E, and GitHub Copilot.
 
 Generative AI Architecture
-
 A Generative AI model follows a sequence of steps to transform user input into meaningful output.
 
 Working Process
@@ -334,12 +323,10 @@ Applications of Generative AI
 	Story generation 
 
 Advantages
-
 	Generates content quickly and efficiently. 
 	Improves productivity and creativity. 
 	
 Limitations
-
 	May generate incorrect or biased information. 
 	Requires large datasets and powerful computing resources. 
 
@@ -383,16 +370,13 @@ GAN	Minimax game between Generator & Discriminator	Fast single-pass generation; 
  Advantages, Disadvantages & Real-World Applications
  
 Advantages
-
 	Massive Parallelization: Fully utilizes GPU cluster acceleration during training.
 	
 Disadvantages
-
 	High Compute Overhead: Processing extremely long documents incurs high quadratic memory costs (O(N^2 )).
 	Hallucinations: Generates syntactically correct but factually inaccurate statements.
 	
 Real-World Applications
-
 	Software Engineering: Code auto-completion, refactoring, and debugging (GitHub Copilot).
 <img width="1390" height="2238" alt="image" src="https://github.com/user-attachments/assets/de844c98-5113-4fef-8db6-267441e059b5" />
 
@@ -400,15 +384,11 @@ Real-World Applications
 
 CHATGPT
 
-
-Impact of Scaling in Large Language Models (LLMs)
-
 Introduction
 
 Large Language Models (LLMs) are advanced Artificial Intelligence (AI) systems that understand and generate human language. Scaling refers to increasing the model parameters, training data, and computing resources used to build these models. 
 
 Impact of Scaling
-
 1. Improved Performance and Accuracy
 Larger models learn more patterns from data, allowing them to generate more accurate and detailed responses while reducing mistakes.
 2. Better Reasoning
@@ -443,7 +423,6 @@ Capabilities Unlocked by Scale
 	Accuracy & Perplexity: Larger memory capacity reduces perplexity and enhances factual recall across specialized domains (medicine, law).
 	
 Frontier LLM Implementations
-
 Model Family	Scaling Approach	Key Capability Unlocked
 GPT Series (OpenAI)	Dense parameters → Mixture-of-Experts (MoE)	Few-shot prompting (GPT-3) & System 2 reasoning
 LLaMA (Meta)	High token-to-parameter ratio (Chinchilla)	Open-weights SOTA performance (7B to 405B+)
@@ -489,14 +468,12 @@ After successful testing, the model is deployed as a chatbot, API, or cloud serv
 Inference is the stage where users interact with the model. When a prompt is entered, the LLM predicts the most appropriate response based on its training.
 
 Popular Large Language Models
-
 	GPT (OpenAI): Used for conversation, coding, content creation, and education. 
 	Gemini (Google): A multimodal AI model that works with text, images, audio, and code. 
 	Claude (Anthropic): Designed to provide safe, reliable, and helpful AI responses. 
 	LLaMA (Meta): An open-weight language model widely used for AI research and development. 
 
 Applications of LLMs
-
 	Chatbots and virtual assistants 
 	Language translation
 GEMINI
